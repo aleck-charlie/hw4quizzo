@@ -29,7 +29,7 @@ function getQuestion() {
     });
 
     // add event listener for each button created
-    checkAnswer();
+    //checkAnswer();
 }
 
 function checkAnswer() {
@@ -62,13 +62,15 @@ function saveHighScore () {
 }
 
 startBtn.addEventListener("click", startQuiz); {
-    questionCard.style.display = "block";
-    startQuiz.style.display = "none";
+    // v used for when questions were coded in html V 
+    //question.style.display = "block";
+    // hide start button on click 
+    startQuiz.style.display = "none"; 
 };
 // saveScore.addEventListener("click", saveHighScore);
 
 // button click event listeners ///////////////////
-// These button codes are from previous tutor session. I'm not sure how to add values to the buttons i created out of thin air, but I know i need them
+
 
 a.addEventListener('click', function () {
     if (a.textContent === questionArray[0].correctAnswer) {
