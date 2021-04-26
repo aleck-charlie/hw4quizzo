@@ -1,12 +1,12 @@
 let question = [{   
     ask: 'Big Question',
     answers: ["one", "two", "correctAnswer", "three"],
-    correctAnswer: ["correctAnswer"]
+    correctAnswer: "correctAnswer"
     },
     {
     ask: 'Question 2',
     answers: ["one","three","correctAnswer","notcorrect"],
-    correctAnswer: ["correctAnswer"]
+    correctAnswer: "correctAnswer"
     }
 ];
 
