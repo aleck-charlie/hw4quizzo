@@ -2,6 +2,6 @@ Currently unable to get answer check function to console log or work with to but
 
 Event listeners for answer button clicks from previous draft where buttons were coded into HTML. I know that they are needed for hidden buttons but not sure how to connect them now that they are hidden.
 
-Event listeners for hide start button also from previous draft, not functioning
+Event listeners for hide start button also from previous draft, not functioning, not defined
 
 No init function yet, wondering if thats causing any problems
