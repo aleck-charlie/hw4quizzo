@@ -1,4 +1,7 @@
-Currently unable to get answer check to react to button clicks, need to build button click event listener
+Currently unable to get answer check function to console log or work with to button clicks. Previously was able to create a console log and alert, but unable to move past that
 
-Had an event listener to hide questions and start button when both were elements in the DOM but not sure how to do that now that they are not
+Event listeners for answer button clicks from previous draft where buttons were coded into HTML. I know that they are needed for hidden buttons but not sure how to connect them now that they are hidden.
 
+Event listeners for hide start button also from previous draft, not functioning
+
+No init function yet, wondering if thats causing any problems
