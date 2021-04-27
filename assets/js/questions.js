@@ -1,21 +1,21 @@
 let question = [{   
-    ask: 'Big Question',
+    ask: 'First Question',
     answers: ["one", "two", "correctAnswer", "three"],
     correctAnswer: "correctAnswer"
     },
     {
     ask: 'Question 2',
-    answers: ["one","three","correctAnswer","notcorrect"],
-    correctAnswer: "correctAnswer"
+    answers: ["one","three","1000","notcorrect"],
+    correctAnswer: "1000"
+    },
+    {
+    ask: 'Question 3',
+    answers: ["4","5","6","7"],
+    correctAnswer: "4"
+    },
+    {
+    ask: 'Final Question',
+    answers: ["b","bananagrams","c","canangrams"],
+    correctAnswer: "bananagrams"
     }
 ];
-
-// let questions = 
-// [{question: 'how old are you?', answer: 5},
-// {question: 'who are you', answer: 'batman'}];
-// questions.forEach(question => {
-//   if (question.answer === 5) {
-//     console.log('correct');
-//   }
-//   console.log(question.answer);
-// });

@@ -1,14 +1,29 @@
 // variables ////////////////////////////////
 
 let startBtn = document.getElementById("start");
+let submitBtn = document.getElementById("submit");
 let questionAsk = document.getElementById("question-ask");
 let answersDiv = document.getElementById("answers-div");
 let questionIndex = 0;
+let point = 0;
+let timer = 80;
+let countDown;
+let timerEl = document.getElementById("timerEl");
+let enterIntials = document.getElementById("enterIntials");
 
 // functions ////////////////////////////////
+function timerCountdown() {
+    // setInterval has to be saved to variable- (callback function, how often to trigger callback function-- milliseconds)
+    countDown = setInterval(function(){
+    timerEl.textContent = timer;
+    timer -= 1;
+    if (timer === 0) endGame()
+    }, 1000); // call back function will decrease timer by 1
+    // set up clear interval
+}
+
 function startQuiz() {
-    //start timer
-    // find dom element to show question
+    timerCountdown();
     getQuestion();
 }
 
@@ -27,64 +42,40 @@ function getQuestion() {
 
 function checkAnswer() {
     if (this.value === question[questionIndex].correctAnswer) {
-
+        point++;
+        alert("nice!");
         questionIndex++; 
         if (questionIndex === question.length){
-            alert("you won!"),
             endGame();
         }
         getQuestion();
     } else {
-        console.log("incorrect")
+        point--;
+        alert("try again!");
+        timer -= 10;
     };
     // check answer
     // incorrect deduct points
     // set score
-    // get next question
-    // getQuestion();
-    // if questions.length
     endGame();
 }
 
+
 function endGame() {
+    clearInterval(countdown);
     // set their score
     // clear out timer
     //show end screen
-    // add initals 
 }
-// event listeners //////////////////////////
+
 function saveHighScore () {
     // prompt for initials save to variable
-    // save score to local storage
+   //target button when click save high score function
+   // save score to local storage
+   let intials = enterIntials.value;
+   localStorage.setItem(intials, point);
+   console.log("hello", intials, point);
 }
 
 startBtn.addEventListener("click", startQuiz); 
-
-// button click event listeners ///////////////////
-
-
-a.addEventListener('click', function () {
-    if (a.textContent === questionArray[0].correctAnswer) {
-        console.log("very correct!");
-    }
-    
-})
-
-b.addEventListener('click', function () {
-    if(b.textContent === questionArray[0].correctAnswer) {
-        console.log("very correct again!")
-    } else {
-        console.log("nah dude");
-    }
-    
-})
-
-c.addEventListener('click', function () {
-    console.log(c.textContent)
-    
-})
-
-d.addEventListener('click', function () {
-    console.log(d.textContent)
-    
-})
+submitBtn.addEventListener("click", saveHighScore);

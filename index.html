@@ -11,20 +11,32 @@
 </head>
 
 <body>
+    <div id="timerEl"></div>
     <div>
         <h1>Pop Quizzo</h1>
         <a href="./highscores.html">Scores</a>
-        <br><br>        
-        
+        <br><br>
+
         <div id="question">
             <span id="question-ask">Question</span><br>
             <div id="answers-div"></div>
-
         </div>
-    </div> 
+        <div id="enterScore">
+            <!--
+        when quiz over, 
+        show score
+        enter initials
+        submit button
+    -->
+            <input type="text" id="enterIntials">
+            <button id="submit">Submit Score</button>
+        </div>
+
+    </div>
     <br><br>
     <button id="start">Start Quiz</button>
-    
+
+
     <script src="./assets/js/questions.js"></script>
     <script src="./assets/js/script.js"></script>
 </body>
